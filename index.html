@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INGEELDI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        #about {
+            background-color: #fff;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* Style pour le bouton */
+        button {
+            padding: 10px 20px;
+            background-color: #555;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>INGEELDI</h1>
+    <nav>
+        <a href="#about">À propos</a>
+        <a href="#gallery">Galerie</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section id="about">
+    <h2>À propos de nous</h2>
+    <p>Nous sommes une entreprise spécialisée dans la conception des projets d'électriciter pour tout vos structure la rénnovation et l'innovation de tout vos batiment</p>
+    <button onclick="alert('Merci de votre intérêt !')">En savoir plus</button>
+</section>
+
+<section id="gallery">
+    <h2>Galerie</h2>
+    <div id="images-container">
+        <!-- Les images seront insérées ici par JavaScript -->
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contactez-nous</h2>
+    <p>japoma douala CAMEROUN</p>
+    <p>Email : BamiBertin</p>
+    <p>Téléphone : +237 697464803</p>
+</section>
+
+<footer>
+    &copy; 2025 Mon Site Vitrine. Tous droits réservés.
+</footer>
+
+<script>
+    // Tableau d'images (vous pouvez changer les URLs)
+    const images = [
+        'photo1.jpg',
+        'photo2.jpg',
+        'photo4.jpg',
+        'photo5.jpg'
+    ];
+
+    const container = document.getElementById('images-container');
+
+    // Fonction pour afficher les images
+    images.forEach(src => {
+        const card = document.createElement('div');
+        card.className = 'card';
+
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = 'Image de la galerie';
+
+        card.appendChild(img);
+        container.appendChild(card);
+    });
+</script>
+
+</body>
+</html>
